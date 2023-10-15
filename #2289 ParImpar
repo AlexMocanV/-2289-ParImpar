@@ -1,0 +1,97 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int long long n,p=1,ogl=0,ogl1=0,uc,copie,m,copie1;
+   
+    cin>>n>>m;
+    copie=n;
+    copie1=m;
+            if(copie%2==0)
+            {
+            p=1;
+            while(copie>0)
+            {
+                uc=copie%10;
+                if(uc%2==0)
+                {
+                ogl=ogl+uc*p;
+                p=p*10;
+                }
+                copie/=10;
+            }
+            
+            }
+            else
+            {
+            p=1;
+            while(copie>0)
+            {
+                uc=copie%10;
+                if(uc%2==1)
+                {
+                ogl=ogl+uc*p;
+                p=p*10;
+                }
+                
+                copie=copie/10;
+            }
+            }
+        
+            if(copie1%2==0)
+            {
+            p=1;
+            while(copie1>0)
+            {
+                uc=copie1%10;
+                if(uc%2==0)
+                {
+                ogl1=ogl1+uc*p;
+                p=p*10;
+                }
+                
+                copie1/=10;
+            }
+            }
+            else
+            {
+            p=1;
+            while(copie1>0)
+            {
+                uc=copie1%10;
+                if(uc%2==1)
+                {
+                ogl1=ogl1+uc*p;
+                p=p*10;
+                }
+                
+                copie1=copie1/10;
+            }
+            }
+        if(ogl==ogl1)
+        {
+                if(n>m)
+                {
+                    cout<<n;
+                }
+                else
+                {
+                    cout<<m;
+                }
+        }
+        else if(ogl>ogl1)
+            {
+            cout<<n;
+            }
+            else 
+            {
+            cout<<m;
+            }
+        
+        
+    
+    
+    return 0;
+}
